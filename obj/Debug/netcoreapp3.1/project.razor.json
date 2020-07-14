@@ -20521,6 +20521,11 @@
   "RootNamespace": "Aula37E_Players_AspNETCore",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\kermt\\Documents\\Projetos\\Aula37E-Players_AspNETCore\\Views\\Noticias\\Index.cshtml",
+      "TargetPath": "Views\\Noticias\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\kermt\\Documents\\Projetos\\Aula37E-Players_AspNETCore\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

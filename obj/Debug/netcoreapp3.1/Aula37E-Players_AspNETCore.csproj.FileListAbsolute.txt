@@ -36,3 +36,4 @@ C:\Users\kermt\Documents\Projetos\Aula37E-Players_AspNETCore\obj\Debug\netcoreap
 C:\Users\kermt\Documents\Projetos\Aula37E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Aula37E-Players_AspNETCore.pdb
 C:\Users\kermt\Documents\Projetos\Aula37E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Aula37E-Players_AspNETCore.genruntimeconfig.cache
 C:\Users\kermt\Documents\Projetos\Aula37E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Aula37E-Players_AspNETCore.csproj.CopyComplete
+C:\Users\kermt\Documents\Projetos\Aula37E-Players_AspNETCore\obj\Debug\netcoreapp3.1\Razor\Views\Noticias\Index.cshtml.g.cs
