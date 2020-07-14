@@ -15,8 +15,7 @@ namespace Aula37E_Players_AspNETCore.Models
         public Partida(){
             CreateFolderAndFile(PATH);
         }
-        private string PrepararLinha(Partida p)
-        {
+        private string PrepararLinha(Partida p){
             return $"{p.IdPartida};{p.Horario};{p.IdEquipe1};{p.IdEquipe2}";
         }
         public void Create(Partida p){
