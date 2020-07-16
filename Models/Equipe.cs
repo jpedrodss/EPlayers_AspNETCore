@@ -12,23 +12,41 @@ namespace Aula37E_Players_AspNETCore.Models
         public string Imagem { get; set; }
 
         private const string PATH = "Database/equipe.csv";
+        /// <summary>
+        /// Método construtor para gerar a pasta.
+        /// </summary>
         public Equipe(){
             CreateFolderAndFile(PATH);
         }
+        /// <summary>
+        /// Método para adicionar a linha no arquivo "csv".
+        /// </summary>
+        /// <param name="e">Equipe</param>
+        /// <returns>Linha no arquivo "csv".</returns>
         private string PrepararLinha(Equipe e){
             return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
         }
+        /// <summary>
+        /// Cadastra a equipe no arquivo "csv".
+        /// </summary>
+        /// <param name="e">Equipe</param>
         public void Create(Equipe e){
             string[] linha = {PrepararLinha(e)};
             File.AppendAllLines(PATH, linha);
         }
-
-        public void Delete(int idEquipe){
+        /// <summary>
+        /// Deleta uma equipe do arquivo "csv".
+        /// </summary>
+        /// <param name="idEquipe"></param>
+        public void Delete(int id){
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(';')[0] == IdEquipe.ToString());
+            linhas.RemoveAll(x => x.Split(';')[0] == id.ToString());
             RewriteCSV(PATH, linhas);
         }
-
+        /// <summary>
+        /// Lê todas as linhas do arquivo "csv".
+        /// </summary>
+        /// <returns>Conteúdo do arquivo "csv".</returns>
         public List<Equipe> ReadAll(){
             List<Equipe> equipes = new List<Equipe>();
             string[] linhas = File.ReadAllLines(PATH);
@@ -44,7 +62,10 @@ namespace Aula37E_Players_AspNETCore.Models
             }
             return equipes;
         }
-
+        /// <summary>
+        /// Altera um atributo do objeto.
+        /// </summary>
+        /// <param name="e">Equipe</param>
         public void Update(Equipe e){
             List<string> linhas = ReadAllLinesCSV(PATH);
             linhas.RemoveAll(x => x.Split(';')[0] == IdEquipe.ToString());

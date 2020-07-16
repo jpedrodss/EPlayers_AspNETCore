@@ -23,9 +23,9 @@ namespace Aula37E_Players_AspNETCore.Models
             File.AppendAllLines(PATH, linha);
         }
 
-        public void Delete(int idNoticias){
+        public void Delete(int id){
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(x => x.Split(";")[0] == idNoticias.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             RewriteCSV(PATH, linhas);
         }
 
