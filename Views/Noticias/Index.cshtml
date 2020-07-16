@@ -3,22 +3,32 @@
     ViewData["Title"] = "Notícias";
 }
 
-<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
+<div class="titulo_pagina">
+    <h1>cadastro de @ViewData["Title"]</h1>
+</div>
 
-    <label for="IdNoticias">ID</label>
-    <input type="text" name="IdNoticias" id="IdNoticias">
+<form class="cadastro" action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
 
-    <label for="Titulo">Título</label>
-    <input type="text" name="Titulo" id="Titulo">
-
-    <label for="Imagem">Imagem</label>
-    <input type="file" name="Imagem" id="Imagem">
+    <div class="campo">
+        <label for="IdNoticias">ID</label>
+        <input type="text" name="IdNoticias" id="IdNoticias">
+    </div>
     
-    <button type="submit">Cadastrar</button>
+    <div class="campo">
+        <label for="Titulo">Título</label>
+        <input type="text" name="Titulo" id="Titulo">
+    </div>
+    
+    <div class="campo">
+        <label for="Imagem">Imagem</label>
+        <input type="file" name="Imagem" id="Imagem">
+    </div>
+    
+    <button class="gradient btn" type="submit">Cadastrar</button>
 
 </form>
 
-<table class="table table-responsive table-striped">
+<table class="table table-responsive table-striped container">
     <thead>
         <th>ID</th>
         <th>Título</th>
@@ -30,7 +40,7 @@
             <tr>
                 <td>@item.IdNoticias</td>
                 <td>@item.Titulo</td>
-                <td><img src="Noticias/@item.Imagem" alt=""></td>
+                <td><img src="img/Noticias/@item.Imagem" alt="Imagem da Notícia @item.Titulo"></td>
                 <td>
                     <a class="nav-link text-dark" asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@item.IdNoticias">Excluir</a>
                 </td>

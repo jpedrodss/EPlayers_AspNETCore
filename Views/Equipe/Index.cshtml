@@ -3,28 +3,40 @@
     ViewData["Title"] = "Equipes";
 }
 
-<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
+<div class="titulo_pagina">
+    <h1>cadastro de @ViewData["Title"]</h1>
+</div>
 
-    <label for="IdEquipe">ID</label>
-    <input type="text" name="IdEquipe" id="IdEquipe">
+<form class="cadastro" action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
 
-    <label for="Nome">Nome</label>
-    <input type="text" name="Nome" id="Nome">
+    <div class="campo">
+        <label for="IdEquipe">ID</label>
+        <input type="text" name="IdEquipe" id="IdEquipe">
+    </div>    
 
-    <label for="Imagem">Imagem</label>
-    <input type="file" name="Imagem" id="Imagem">
+    <div class="campo">
+        <label for="Nome">Nome</label>
+        <input type="text" name="Nome" id="Nome">
+    </div>
+
+    <div class="campo">
+        <label for="Imagem">Imagem</label>
+        <input type="file" name="Imagem" id="Imagem">
+    </div>
+
     
-    <button type="submit">Cadastrar</button>
+    <button type="submit" class="gradient btn">Cadastrar</button>
 
 </form>
 
-<table class="table table-responsive table-striped">
+<table class="table table-responsive table-striped container">
     <thead>
         <th>ID</th>
         <th>Nome</th>
         <th>Imagem</th>
         <th>Ações</th>
     </thead>
+    
     <tbody>
         @foreach (Equipe item in ViewBag.Equipes){
             <tr>
@@ -32,7 +44,7 @@
                 <td>@item.Nome</td>
                 <td><img src="img/Equipes/@item.Imagem" alt="Imagem da Equipe @item.Nome"></td>
                 <td>
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe">Excluir</a>
+                    <a class="fas fa-trash" asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe"></a>
                 </td>
             </tr>
         }
