@@ -28,7 +28,7 @@
 
 </form>
 
-<table class="table table-responsive table-striped container">
+<table>
     <thead>
         <th>ID</th>
         <th>Título</th>
@@ -40,9 +40,9 @@
             <tr>
                 <td>@item.IdNoticias</td>
                 <td>@item.Titulo</td>
-                <td><img src="img/Noticias/@item.Imagem" alt="Imagem da Notícia @item.Titulo"></td>
+                <td><img src="/img/Noticias/@item.Imagem" alt="Imagem da Notícia @item.Titulo"></td>
                 <td>
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@item.IdNoticias">Excluir</a>
+                    <a asp-area="" asp-controller="Noticias" asp-action="Excluir" asp-route-id="@item.IdNoticias"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
         }

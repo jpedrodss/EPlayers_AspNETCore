@@ -29,7 +29,7 @@
 
 </form>
 
-<table class="table table-responsive table-striped container">
+<table>
     <thead>
         <th>ID</th>
         <th>Nome</th>
@@ -42,9 +42,9 @@
             <tr>
                 <td>@item.IdEquipe</td>
                 <td>@item.Nome</td>
-                <td><img src="img/Equipes/@item.Imagem" alt="Imagem da Equipe @item.Nome"></td>
+                <td><img src="/img/Equipes/@item.Imagem" alt="Imagem da Equipe @item.Nome"></td>
                 <td>
-                    <a class="fas fa-trash" asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe"></a>
+                    <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@item.IdEquipe"><i class="fas fa-trash" ></i></a>
                 </td>
             </tr>
         }
